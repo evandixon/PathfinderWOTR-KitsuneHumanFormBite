@@ -22,31 +22,9 @@ namespace KitsuneHumanFormBite
 
         public static bool Load(UnityModManager.ModEntry modEntry)
         {
-            modEntry.OnGUI = OnGUI;
             var harmony = new Harmony(modEntry.Info.Id);
             harmony.PatchAll(Assembly.GetExecutingAssembly());
             return true;
-        }
-
-        public static bool OnToggle(UnityModManager.ModEntry modEntry, bool value)
-        {
-            Enabled = value;
-            return true;
-        }
-        static void OnGUI(UnityModManager.ModEntry modEntry)
-        {
-            var party = Game.Instance.Player.Party.ToList();
-            var player = party[0];
-            GUILayout.Label("Is Polymorphed: " + player.Body.IsPolymorphed, GUILayout.ExpandWidth(false));
-            foreach (var limb in player.Body.AdditionalLimbs)
-            {
-                GUILayout.Label($"Limb: {(limb.MaybeItem != null ? "Has item" : "No item")}. Eligible for polymorph: {(limb.MaybeItem as ItemEntityWeapon)?.Blueprint.KeepInPolymorph}. Id: {(limb.MaybeItem as ItemEntityWeapon)?.Blueprint?.AssetGuid}", GUILayout.ExpandWidth(false));
-            }
-            GUILayout.Label("Additional Limbs Eligible For Polymorph: " + player.Body.AdditionalLimbs.Count(l =>
-            {
-                ItemEntityWeapon itemEntityWeapon = l?.MaybeItem as ItemEntityWeapon;
-                return (itemEntityWeapon != null && itemEntityWeapon.Blueprint.KeepInPolymorph);
-            }), GUILayout.ExpandWidth(false));
         }
 
         /// <summary>
