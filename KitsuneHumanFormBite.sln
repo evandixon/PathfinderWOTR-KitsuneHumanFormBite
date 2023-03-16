@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitsuneHumanFormBite", "KitsuneHumanFormBite\KitsuneHumanFormBite.csproj", "{6B65F83E-AE7B-45F9-9F5A-FD1DBF835D34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ECB99F05-4380-40AB-99BD-06CB5F569229}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B65F83E-AE7B-45F9-9F5A-FD1DBF835D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B65F83E-AE7B-45F9-9F5A-FD1DBF835D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B65F83E-AE7B-45F9-9F5A-FD1DBF835D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B65F83E-AE7B-45F9-9F5A-FD1DBF835D34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F23CCBE5-2D5A-4256-88B4-71445A662F25}
+	EndGlobalSection
+EndGlobal

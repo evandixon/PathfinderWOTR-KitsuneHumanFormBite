@@ -1,0 +1,10 @@
+﻿{
+	"Id": "KitsuneHumanFormBite",
+	"DisplayName": "Kitsune Human Form Bite",
+	"Author": "evandixon",
+	"Version": "1.0.0",
+	"ManagerVersion": "0.25.4",
+	"Requirements": [],
+	"AssemblyName": "KitsuneHumanFormBite.dll",
+	"EntryMethod": "KitsuneHumanFormBite.Main.Load"
+}
