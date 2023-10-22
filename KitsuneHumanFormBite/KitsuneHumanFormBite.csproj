@@ -3,7 +3,7 @@
   <Import Project="..\packages\AssemblyPublicizer.1.0.2\build\AssemblyPublicizer.props" Condition="Exists('..\packages\AssemblyPublicizer.1.0.2\build\AssemblyPublicizer.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <WrathPath>C:\Program Files (x86)\GOG Galaxy\Games\Pathfinder Wrath of the Righteous</WrathPath>
+    <WrathPath>D:\Games\SteamLibrary\steamapps\common\Pathfinder Second Adventure</WrathPath>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6B65F83E-AE7B-45F9-9F5A-FD1DBF835D34}</ProjectGuid>
@@ -44,6 +44,9 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>$(WrathPath)\Wrath_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="AssemblyPublicizer, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AssemblyPublicizer.1.0.2\lib\net472\AssemblyPublicizer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -336,7 +339,7 @@
   <Target Name="Publicize" AfterTargets="Clean">
     <ItemGroup>
       <!-- Use $(KingmakerPath)\Kingmaker_Data\Managed\Assembly-CSharp.dll for Kingmaker -->
-      <Assemblies Include="C:\Program Files (x86)\GOG Galaxy\Games\Pathfinder Wrath of the Righteous\Wrath_Data\Managed\Assembly-CSharp.dll" />
+      <Assemblies Include="$(WrathPath)\Wrath_Data\Managed\Assembly-CSharp.dll" />
     </ItemGroup>
     <PublicizeTask InputAssemblies="@(Assemblies)" OutputDir="$(SolutionDir)lib/" />
   </Target>
